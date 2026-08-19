@@ -1,0 +1,47 @@
+{
+  "name": "figma",
+  "label": "Figma",
+  "description": "Read your Figma designs — file structure, rendered frames, and design tokens.",
+  "icon": "paintbrush",
+  "version": "0.1.0",
+  "author": "TheBananaStand",
+  "homepage": "https://github.com/TheBananaStand/leo-figma",
+  "category": "package",
+  "mcp": {
+    "transport": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "github:TheBananaStand/leo-figma#322b9f5b93c631469c8b339ee8113d9e9b2f3d42"
+    ],
+    "env": {
+      "FIGMA_TOKEN": "${settings.figma_api_key}"
+    },
+    "timeout_secs": 60
+  },
+  "descriptor": {
+    "fields": [
+      {
+        "key": "figma_api_key",
+        "label": "Figma personal access token",
+        "field_type": "password",
+        "required": true
+      }
+    ],
+    "pages": [],
+    "migrations": [],
+    "entitlements": {
+      "feed": false,
+      "push": false,
+      "settings_read": ["figma_api_key"],
+      "network": ["api.figma.com"],
+      "sends": [
+        {
+          "to": "api.figma.com",
+          "classes": ["credentials", "search_queries"],
+          "purpose": "Your Figma token, and the file key and node ids you ask about. Design data travels the other way — nothing from Leo is sent to Figma, and the package can only read."
+        }
+      ]
+    }
+  }
+}
