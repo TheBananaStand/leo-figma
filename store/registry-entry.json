@@ -12,7 +12,7 @@
     "command": "npx",
     "args": [
       "-y",
-      "github:TheBananaStand/leo-figma#322b9f5b93c631469c8b339ee8113d9e9b2f3d42"
+      "github:TheBananaStand/leo-figma#7a4abe2ffd2fa5228d71c6305605799f5d6fa3b3"
     ],
     "env": {
       "FIGMA_TOKEN": "${settings.figma_api_key}"
