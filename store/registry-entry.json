@@ -2,7 +2,7 @@
   "name": "figma",
   "label": "Figma",
   "description": "Read your Figma designs — file structure, rendered frames, and design tokens.",
-  "icon": "paintbrush",
+  "icon": "paint-brush",
   "version": "0.1.0",
   "author": "TheBananaStand",
   "homepage": "https://github.com/TheBananaStand/leo-figma",
