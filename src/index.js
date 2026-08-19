@@ -8,8 +8,11 @@
  * every byte that executes, there is no transitive resolution at install time,
  * and a reviewer reads the code that actually runs instead of a build artifact.
  *
- * The token arrives as FIGMA_TOKEN, which Leo fills from the owner's settings
- * via `${settings.figma_api_key}` in the catalog entry's `mcp.env`.
+ * The token arrives as FIGMA_TOKEN, which Leo puts in the environment because
+ * the catalog entry declares `settings_read: ["FIGMA_TOKEN"]` — a package is
+ * handed exactly the settings keys it declared and nothing else. Nothing here
+ * depends on that: this reads an environment variable, as it would if it were
+ * run by hand.
  */
 
 import { FigmaError } from "./figma.js";
