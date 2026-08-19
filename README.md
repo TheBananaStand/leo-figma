@@ -36,10 +36,12 @@ Node 18+ (it uses the built-in `fetch`).
 2. In Leo: install **Figma** from the package store and paste the token into
    its settings.
 
-Leo passes the token to this server as `FIGMA_TOKEN`, filled from the
-`figma_api_key` setting via `${settings.figma_api_key}` in the catalog entry —
-so the token stays in Leo's settings table and is handed over only because the
-entry declares `settings_read: ["figma_api_key"]`.
+Leo hands the token over as `FIGMA_TOKEN`, and only because the catalog entry
+declares `settings_read: ["FIGMA_TOKEN"]` — a package receives exactly the
+settings keys it declared and nothing else. The setting is named for the
+environment variable because Leo injects an entitled setting under its own key;
+the value itself never leaves Leo's settings table for the catalog, which is a
+public file.
 
 ## Two things Figma will do to you
 

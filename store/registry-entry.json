@@ -1,7 +1,7 @@
 {
   "name": "figma",
   "label": "Figma",
-  "description": "Read your Figma designs — file structure, rendered frames, and design tokens.",
+  "description": "Read your Figma designs \u2014 file structure, rendered frames, and design tokens.",
   "icon": "paint-brush",
   "version": "0.1.0",
   "author": "TheBananaStand",
@@ -14,15 +14,12 @@
       "-y",
       "github:TheBananaStand/leo-figma#7a4abe2ffd2fa5228d71c6305605799f5d6fa3b3"
     ],
-    "env": {
-      "FIGMA_TOKEN": "${settings.figma_api_key}"
-    },
     "timeout_secs": 60
   },
   "descriptor": {
     "fields": [
       {
-        "key": "figma_api_key",
+        "key": "FIGMA_TOKEN",
         "label": "Figma personal access token",
         "field_type": "password",
         "required": true
@@ -33,13 +30,20 @@
     "entitlements": {
       "feed": false,
       "push": false,
-      "settings_read": ["figma_api_key"],
-      "network": ["api.figma.com"],
+      "settings_read": [
+        "FIGMA_TOKEN"
+      ],
+      "network": [
+        "api.figma.com"
+      ],
       "sends": [
         {
           "to": "api.figma.com",
-          "classes": ["credentials", "search_queries"],
-          "purpose": "Your Figma token, and the file key and node ids you ask about. Design data travels the other way — nothing from Leo is sent to Figma, and the package can only read."
+          "classes": [
+            "credentials",
+            "search_queries"
+          ],
+          "purpose": "Your Figma token, and the file key and node ids you ask about. Design data travels the other way \u2014 nothing from Leo is sent to Figma, and the package can only read."
         }
       ]
     }
