@@ -1,0 +1,25 @@
+{
+  "name": "leo-figma",
+  "version": "0.1.0",
+  "description": "Read-only Figma tools for Leo, over the Model Context Protocol.",
+  "type": "module",
+  "bin": {
+    "leo-figma": "src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test 'test/*.test.js'"
+  },
+  "license": "MIT",
+  "author": "TheBananaStand",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBananaStand/leo-figma.git"
+  },
+  "homepage": "https://github.com/TheBananaStand/leo-figma"
+}
