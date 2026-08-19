@@ -12,7 +12,7 @@
     "command": "npx",
     "args": [
       "-y",
-      "github:TheBananaStand/leo-figma#7a4abe2ffd2fa5228d71c6305605799f5d6fa3b3"
+      "github:TheBananaStand/leo-figma#4405fd0533ad8c9ab6078c762db6ee4678c6be89"
     ],
     "timeout_secs": 60
   },
